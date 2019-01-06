@@ -87,3 +87,12 @@ Raspberry Pi....
 dnf install libva-intel-hybrid-driver libva-intel-driver
 dnf install intel-media-driver
 ```
+
+### Firefox
+
+To change compositing from 'basic' to 'OpenGL' (see about:support):
+
+about:config > 
+
+layers.accelleration.force-enabled > true
+layout.display-list.retain.chrome > true
