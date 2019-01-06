@@ -63,3 +63,27 @@ dnf install hdparm
 sudo hdparm -I /dev/sda | grep TRIM
 sudo systemctl enable --now fstrim.timer
 ```
+## video accelleration
+```
+[root@green2 ~]# lspci
+00:00.0 Host bridge: Intel Corporation Haswell-ULT DRAM Controller (rev 09)
+00:02.0 VGA compatible controller: Intel Corporation Haswell-ULT Integrated Graphics Controller (rev 09)
+00:03.0 Audio device: Intel Corporation Haswell-ULT HD Audio Controller (rev 09)
+00:14.0 USB controller: Intel Corporation 8 Series USB xHCI HC (rev 04)
+00:16.0 Communication controller: Intel Corporation 8 Series HECI #0 (rev 04)
+00:1b.0 Audio device: Intel Corporation 8 Series HD Audio Controller (rev 04)
+00:1c.0 PCI bridge: Intel Corporation 8 Series PCI Express Root Port 3 (rev e4)
+00:1f.0 ISA bridge: Intel Corporation 8 Series LPC Controller (rev 04)
+00:1f.2 SATA controller: Intel Corporation 8 Series SATA Controller 1 [AHCI mode] (rev 04)
+00:1f.3 SMBus: Intel Corporation 8 Series SMBus Controller (rev 04)
+01:00.0 Ethernet controller: Marvell Technology Group Ltd. 88W8897 [AVASTAR] 802.11ac Wireless
+[root@green2 ~]# 
+```
+A bit of research suggested the high CPU i was experiences with video playback might be
+fixed with some packages. Small impact. Perhaps. Noting like the performance I get from
+Raspberry Pi....
+
+```
+dnf install libva-intel-hybrid-driver libva-intel-driver
+dnf install intel-media-driver
+```
