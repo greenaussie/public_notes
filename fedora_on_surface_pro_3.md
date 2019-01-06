@@ -56,3 +56,10 @@ HandleLidSwitchDocked=suspend-then-hibernate
 ```
 See `man /etc/systemd/logind.conf`
 
+## ssd disk trim
+
+```
+dnf install hdparm
+sudo hdparm -I /dev/sda | grep TRIM
+sudo systemctl enable --now fstrim.timer
+```
