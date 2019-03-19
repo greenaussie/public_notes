@@ -13,7 +13,7 @@ SUSPEND_MODULES="mwifiex"
 
 ### Second fix
 
-Outcome to be evaluated.
+This fixed my wifi drop out issues.
 
 https://github.com/jakeday/linux-surface/issues/84#issuecomment-363072395
 
