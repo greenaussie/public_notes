@@ -96,3 +96,21 @@ about:config >
 
 layers.accelleration.force-enabled > true
 layout.display-list.retain.chrome > true
+
+## Phantom touch input
+
+Random input happenings. Found this https://www.youtube.com/watch?v=MdmnIG5ZVM4. Solution seems to be working, and strangely, the touch screen still seems to be working. So one would assume there are two drivers involved and this simply avoids contention.
+
+/usr/share/X11/xorg.conf.d/10-evdev.conf:
+
+```text
+Section "InputClass"
+        Identifier "evdev touchscreen catchall"
+        MatchIsTouchscreen "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "evdev"
+        
+        # Add this line to control the phantom input
+        Option "Ignore" "on"
+EndSection
+```
