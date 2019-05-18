@@ -102,6 +102,8 @@ dnf copr enable phracek/PyCharm
 
 ## Upgrade Fedora 29 to Fedora 30
 
+Check backups and remind myself of their encryption key!
+
 ### OS
 
 https://fedoramagazine.org/upgrading-fedora-29-to-fedora-30/
