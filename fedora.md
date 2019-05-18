@@ -99,3 +99,11 @@ tvheadend may be changed now to https://dl.bintray.com/tvheadend/fedora/:bintray
 ```
 dnf copr enable phracek/PyCharm
 ```
+
+## Upgrade Fedora 29 to Fedora 30
+
+### OS
+
+https://fedoramagazine.org/upgrading-fedora-29-to-fedora-30/
+
+### Post upgrade
