@@ -45,6 +45,8 @@ I installed most of the packages listed at https://docs.fedoraproject.org/en-US/
 
 /etc/default/grub.conf
 
+| Line | Description |
+|--------------------|-------------------------------------------------------------------------------|
 | GRUB_CMDLINE_LINUX | Note the blacklisting of nouveau driver and the omission of the word 'splash' |
 | GRUB_GFXMODE= | Note the screen resolution command |
 
