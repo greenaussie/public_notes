@@ -94,4 +94,8 @@ fedora-updates.repo
 rpmfusion-nonfree-nvidia-driver.repo
 ```
 
-Note that tvheadend may be changed now to https://dl.bintray.com/tvheadend/fedora/:bintray-tvheadend-fedora-4.2-stable.repo
+tvheadend may be changed now to https://dl.bintray.com/tvheadend/fedora/:bintray-tvheadend-fedora-4.2-stable.repo, but that actually tvheadend is from rpmfusion, therefore probably that is not required.
+
+```
+dnf copr enable phracek/PyCharm
+```
