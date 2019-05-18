@@ -62,4 +62,8 @@ GRUB_TERMINAL_OUTPUT="gfxterm"
 GRUB_FONT_PATH="/boot/grub2/fonts/unicode.pf2"
 GRUB_GFXMODE="3440x1440x16"
 ```
+Then
+
+```bash
 sudo grub2-mkconfig
+```
