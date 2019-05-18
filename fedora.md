@@ -106,7 +106,9 @@ dnf copr enable phracek/PyCharm
 
 https://fedoramagazine.org/upgrading-fedora-29-to-fedora-30/
 
-Tried GUI (gnome-softare) method - basically just stopped at about 30%, so went to the CLI method.
+https://fedoraproject.org/wiki/Common_F30_bugs
+
+Tried GUI (gnome-softare) method - basically just stopped at about 30%, so went to the CLI method. 
 
 ```bash
 sudo dnf upgrade --refresh
@@ -116,3 +118,5 @@ sudo dnf system-upgrade reboot
 ```
 
 ### Post upgrade
+
+TODO: As a result of the aborted gnome-software update, which uses [packagekit](https://www.freedesktop.org/software/PackageKit/), need to clean /var/cache/PackageKit/30/ (and probably delete /var/cache/PackageKit/29/). Probably the [best way to do this](https://unix.stackexchange.com/questions/265755/fedora-23-can-i-safely-delete-files-in-var-cache-packagekit-metadata-updates) is ``sudo pkcon refresh force -c -1``.
