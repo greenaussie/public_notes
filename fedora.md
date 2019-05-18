@@ -106,4 +106,13 @@ dnf copr enable phracek/PyCharm
 
 https://fedoramagazine.org/upgrading-fedora-29-to-fedora-30/
 
+Tried GUI (gnome-softare) method - basically just stopped at about 30%, so went to the CLI method.
+
+```bash
+sudo dnf upgrade --refresh
+sudo dnf install dnf-plugin-system-upgrade
+sudo dnf system-upgrade download --releasever=30
+sudo dnf system-upgrade reboot
+```
+
 ### Post upgrade
