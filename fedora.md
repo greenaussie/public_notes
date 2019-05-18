@@ -69,3 +69,29 @@ Then
 ```bash
 sudo grub2-mkconfig
 ```
+
+## Repositories
+
+```text
+_copr_phracek-PyCharm.repo
+fedora-updates-testing-modular.repo
+rpmfusion-nonfree.repo
+dl.bintray.com_tvheadend_fedora_linux_4.2_fc28_x86_64_.repo
+fedora-updates-testing.repo
+rpmfusion-nonfree-steam.repo
+fedora-cisco-openh264.repo 
+google-chrome.repo
+rpmfusion-nonfree-updates.repo
+fedora-modular.repo
+rpmfusion-free.repo
+rpmfusion-nonfree-updates-testing.repo
+fedora.repo
+rpmfusion-free-updates.repo
+vscode.repo
+fedora-updates-modular.repo
+rpmfusion-free-updates-testing.repo
+fedora-updates.repo
+rpmfusion-nonfree-nvidia-driver.repo
+```
+
+Note that tvheadend may be changed now to https://dl.bintray.com/tvheadend/fedora/:bintray-tvheadend-fedora-4.2-stable.repo
