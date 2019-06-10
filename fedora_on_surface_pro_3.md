@@ -4,6 +4,8 @@
 
 ### First fix
 
+> **Update to Fedora 30**. This fix requires the `pm-utils` package which is no longer available for Fedora.
+
 This increased stability on return from suspend.
 
 Create ``/etc/pm/config.d/modules`` with the contents below, to unload the module before suspend and reload on resume.
@@ -37,7 +39,28 @@ https://github.com/jakeday/linux-surface/issues/84#issuecomment-363072395
 > 
 > To /etc/NetworkManager/NetworkManager.conf seems to have done the trick. It may have to do with the fact that I am using NetworkManager now that I think of it. I am not sure what is the default connection manager for Ubuntu.
 
+## Third fix - systemd
+
+It transpires that Gnome 3 invokes systemd to carry out commands such as `systemctl suspend-then-hibernate` and `systemctl suspend`. See `man systemd-sleep` for details. As a result, the following hack is used to unload the wifi adaptor modules when the system sleeps, and restores then whem the system wakes up.
+
+/usr/lib/systemd/system-sleep/remove-wifi-adapter-modules.sh:
+
+```bash
+#!/bin/bash
+[ "$1" = "post" ] && exec /usr/sbin/modprobe mwifiex_pcie mwifiex
+[ "$1" = "pre" ] && exec /usr/sbin/rmmod mwifiex_pcie mwifiex
+exit 0
+```
+
+```bash
+chmod +x /usr/lib/systemd/system-sleep/remove-wifi-adapter-modules.sh
+systemctl daemon-reload
+```
+
+
 ## Suspend and hibernate
+
+> **Fedora 30** Apparently these settings are ignored when Gnome is in use. Gnome will pick the suspend mode which will save most power and invoke it directly using systemd.
 
 I changed pretty much anything which was configured to use ``suspend`` to ``suspend-then-hibername``, which became available in Fedora 29. Prior to that, there was 'hybrid-sleep' which chose a direct 'hibernate' if it was available, otherwise would simple suspend.
 
