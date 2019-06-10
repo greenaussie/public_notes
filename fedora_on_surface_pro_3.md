@@ -15,6 +15,8 @@ SUSPEND_MODULES="mwifiex"
 
 ### Second fix
 
+> **Fedora 30 note** I left this in place for Fedora 30. No reason to think a hardware problem is fixed by an operating system update. But not tested.
+
 This fixed my wifi drop out issues.
 
 https://github.com/jakeday/linux-surface/issues/84#issuecomment-363072395
