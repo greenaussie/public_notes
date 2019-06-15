@@ -1,5 +1,12 @@
 # Notes on Fedora setup specific to Surface Pro 3
 
+## And then it broek again....
+
+Update from kernel 5.0.17-300 (no problems) to 5.1.7-300 and 5.1.7-300, I cannot connect to some wifi networks (mwifiex driver, marvel firmware). Both current and
+previous firmware (from linux-firmware, which was experimenally downgraded with `dnf downgrade linux-firmware`) have this problem. Booting with 5.0 kernel
+fixes the problem, so it can be surmised an update to the kernel or the kernel module is involved. Yet to report this problem. `journalctl -u NetworkManager -u wpa_supplicant` seem
+to gather some logs at `info` level but not much there other than authentication seems to fail. See [log here](log.txt) of an attempt to switch networks. WPA suplicant at least probably needs to be started in debug mode.
+
 ## Wifi drop out
 
 ### First fix
@@ -14,9 +21,7 @@ Create ``/etc/pm/config.d/modules`` with the contents below, to unload the modul
 SUSPEND_MODULES="mwifiex"
 ```
 
-### Second fix
-
-> **Fedora 30 note** I left this in place for Fedora 30. No reason to think a hardware problem is fixed by an operating system update. But not tested.
+### Wifi dropout
 
 This fixed my wifi drop out issues.
 
@@ -42,7 +47,7 @@ https://github.com/jakeday/linux-surface/issues/84#issuecomment-363072395
 
 > To /etc/NetworkManager/NetworkManager.conf seems to have done the trick. It may have to do with the fact that I am using NetworkManager now that I think of it. I am not sure what is the default connection manager for Ubuntu.
 
-## Third fix - systemd
+## Wifi not available when waking from a sleep mode:
 
 It transpires that Gnome 3 invokes systemd to carry out commands such as `systemctl suspend-then-hibernate` and `systemctl suspend`. See `man systemd-sleep` for details. As a result, the following hack is used to unload the wifi adaptor modules when the system sleeps, and restores then whem the system wakes up.
 
@@ -62,25 +67,13 @@ systemctl daemon-reload
 
 ## Suspend and hibernate
 
-> **Fedora 30** Apparently these settings are ignored when Gnome is in use. Gnome will pick the suspend mode which will save most power and invoke it directly using systemd.
+Gnome will determine the deepest sleep mode possible, and invoke that to make your system sleep. It is not clear if this includes pressing of power button, or shutting the lid.
 
-I changed pretty much anything which was configured to use ``suspend`` to ``suspend-then-hibername``, which became available in Fedora 29. Prior to that, there was 'hybrid-sleep' which chose a direct 'hibernate' if it was available, otherwise would simple suspend.
+You can work out which modes are supported by trying them out, but you cannot make gnome use them:
 
-Using ``suspend`` on it's own is fine, but still consumes a significant amount of power.
-
-This works OK with LUKS (which I configure at disk level).
-
-These are the lines I changed in `/etc/systemd/logind.conf`:
-
-```text
-HandleSuspendKey=suspend-then-hibernate
-HandleHibernateKey=suspend-then-hibernate
-HandleLidSwitch=suspend-then-hibernate
-HandleLidSwitchExternalPower=suspend-then-hibernate
-HandleLidSwitchDocked=suspend-then-hibernate
-```
-
-See `man /etc/systemd/logind.conf`
+systemctl suspend # does something
+systemctl hybrid-sleep # not available
+systenctl suspend-then-hibernate # seems to map to above.
 
 ## ssd disk trim
 

@@ -1,0 +1,218 @@
+journalctl -f -u wpa_supplicant.service -u NetworkManager
+-- Logs begin at Thu 2019-05-02 20:57:08 AEST. --
+Jun 15 15:08:50 green2 NetworkManager[1460]: <info>  [1560575330.6142] device (wlp1s0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:08:50 green2 NetworkManager[1460]: <info>  [1560575330.6149] manager: NetworkManager state is now CONNECTED_LOCAL
+Jun 15 15:08:50 green2 dhclient[24438]: bound to 192.168.0.12 -- renewal in 39693 seconds.
+Jun 15 15:08:50 green2 NetworkManager[1460]: <info>  [1560575330.6732] manager: NetworkManager state is now CONNECTED_SITE
+Jun 15 15:08:50 green2 NetworkManager[1460]: <info>  [1560575330.6733] policy: set 'ZombieFleshEaters 1' (wlp1s0) as default for IPv4 routing and DNS
+Jun 15 15:08:50 green2 NetworkManager[1460]: <info>  [1560575330.6858] device (wlp1s0): Activation: successful, device activated.
+Jun 15 15:08:51 green2 NetworkManager[1460]: <info>  [1560575331.4609] manager: NetworkManager state is now CONNECTED_GLOBAL
+Jun 15 15:08:52 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-45 noise=-94 txrate=65000
+Jun 15 15:10:05 green2 NetworkManager[1460]: <info>  [1560575405.6617] agent-manager: req[0x562f8274e670, :1.327/org.gnome.Shell.NetworkAgent/1000]: agent registered
+Jun 15 15:20:09 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-40 noise=-93 txrate=72200
+Jun 15 15:22:46 green2 NetworkManager[1460]: <info>  [1560576166.8868] device (wlp1s0): disconnecting for new activation request.
+Jun 15 15:22:46 green2 NetworkManager[1460]: <info>  [1560576166.8870] device (wlp1s0): state change: activated -> deactivating (reason 'new-activation', sys-iface-state: 'managed')
+Jun 15 15:22:46 green2 NetworkManager[1460]: <info>  [1560576166.9535] audit: op="connection-activate" uuid="8d7b2b45-1293-4ead-928b-fe57353b4b2e" name="AndroidAP6543" pid=2986 uid=1000 result="success"
+Jun 15 15:22:46 green2 NetworkManager[1460]: <info>  [1560576166.9538] device (wlp1s0): state change: deactivating -> disconnected (reason 'new-activation', sys-iface-state: 'managed')
+Jun 15 15:22:46 green2 NetworkManager[1460]: <info>  [1560576166.9674] dhcp4 (wlp1s0): canceled DHCP transaction, DHCP client pid 24438
+Jun 15 15:22:46 green2 NetworkManager[1460]: <info>  [1560576166.9676] dhcp4 (wlp1s0): state changed bound -> done
+Jun 15 15:22:47 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-DISCONNECTED bssid=c4:04:15:4e:e4:12 reason=3 locally_generated=1
+Jun 15 15:22:49 green2 wpa_supplicant[1632]: dbus: wpa_dbus_property_changed: no property SessionLength in object /fi/w1/wpa_supplicant1/Interfaces/2
+Jun 15 15:22:50 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=CORE type=WORLD
+Jun 15 15:22:50 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-REGDOM-CHANGE init=USER type=COUNTRY alpha2=AU
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6311] device (wlp1s0): set-hw-addr: set MAC address to 1E:12:AB:8F:9C:06 (scanning)
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6534] device (wlp1s0): Activation: starting connection 'AndroidAP6543' (8d7b2b45-1293-4ead-928b-fe57353b4b2e)
+Jun 15 15:22:51 green2 NetworkManager[1460]: <warn>  [1560576171.6543] sup-iface[0x562f825d7aa0,wlp1s0]: connection disconnected (reason -3)
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6545] device (wlp1s0): supplicant interface state: completed -> disconnected
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6545] device (p2p-dev-wlp1s0): supplicant management interface state: completed -> disconnected
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6599] device (wlp1s0): supplicant interface state: disconnected -> disabled
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6599] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> disabled
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6602] device (wlp1s0): supplicant interface state: disabled -> disconnected
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6602] device (p2p-dev-wlp1s0): supplicant management interface state: disabled -> disconnected
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6619] device (wlp1s0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.6623] manager: NetworkManager state is now CONNECTING
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7055] device (wlp1s0): set-hw-addr: reset MAC address to 4C:0B:BE:2C:DB:06 (preserve)
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7095] device (wlp1s0): supplicant interface state: disconnected -> disabled
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7096] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> disabled
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7098] device (wlp1s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7103] device (wlp1s0): Activation: (wifi) access point 'AndroidAP6543' has security, but secrets are required.
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7104] device (wlp1s0): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7122] device (wlp1s0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7127] device (wlp1s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7131] device (wlp1s0): Activation: (wifi) connection 'AndroidAP6543' has security, and secrets exist.  No new secrets needed.
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7132] Config: added 'ssid' value 'AndroidAP6543'
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7132] Config: added 'scan_ssid' value '1'
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7132] Config: added 'bgscan' value 'simple:30:-80:86400'
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7132] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256'
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7132] Config: added 'auth_alg' value 'OPEN'
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7133] Config: added 'psk' value '<hidden>'
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7155] device (wlp1s0): supplicant interface state: disabled -> disconnected
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7155] device (p2p-dev-wlp1s0): supplicant management interface state: disabled -> disconnected
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7264] device (wlp1s0): supplicant interface state: disconnected -> scanning
+Jun 15 15:22:51 green2 NetworkManager[1460]: <info>  [1560576171.7264] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> scanning
+Jun 15 15:23:07 green2 wpa_supplicant[1632]: wlp1s0: Trying to associate with 32:07:4d:1a:73:bd (SSID='AndroidAP6543' freq=2412 MHz)
+Jun 15 15:23:07 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=1
+Jun 15 15:23:07 green2 NetworkManager[1460]: <info>  [1560576187.4758] device (wlp1s0): supplicant interface state: scanning -> associating
+Jun 15 15:23:07 green2 NetworkManager[1460]: <info>  [1560576187.4759] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> associating
+Jun 15 15:23:07 green2 NetworkManager[1460]: <info>  [1560576187.4806] device (wlp1s0): supplicant interface state: associating -> disconnected
+Jun 15 15:23:07 green2 NetworkManager[1460]: <info>  [1560576187.4808] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> disconnected
+Jun 15 15:23:07 green2 NetworkManager[1460]: <info>  [1560576187.5818] device (wlp1s0): supplicant interface state: disconnected -> scanning
+Jun 15 15:23:07 green2 NetworkManager[1460]: <info>  [1560576187.5820] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> scanning
+Jun 15 15:23:10 green2 wpa_supplicant[1632]: wlp1s0: Trying to associate with 32:07:4d:1a:73:bd (SSID='AndroidAP6543' freq=2412 MHz)
+Jun 15 15:23:10 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=1
+Jun 15 15:23:10 green2 NetworkManager[1460]: <info>  [1560576190.8321] device (wlp1s0): supplicant interface state: scanning -> associating
+Jun 15 15:23:10 green2 NetworkManager[1460]: <info>  [1560576190.8325] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> associating
+Jun 15 15:23:10 green2 NetworkManager[1460]: <info>  [1560576190.8346] device (wlp1s0): supplicant interface state: associating -> disconnected
+Jun 15 15:23:10 green2 NetworkManager[1460]: <info>  [1560576190.8347] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> disconnected
+Jun 15 15:23:11 green2 NetworkManager[1460]: <info>  [1560576191.3337] device (wlp1s0): supplicant interface state: disconnected -> scanning
+Jun 15 15:23:11 green2 NetworkManager[1460]: <info>  [1560576191.3338] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> scanning
+Jun 15 15:23:14 green2 wpa_supplicant[1632]: wlp1s0: Trying to associate with 32:07:4d:1a:73:bd (SSID='AndroidAP6543' freq=2412 MHz)
+Jun 15 15:23:14 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=1
+Jun 15 15:23:14 green2 NetworkManager[1460]: <info>  [1560576194.5846] device (wlp1s0): supplicant interface state: scanning -> associating
+Jun 15 15:23:14 green2 NetworkManager[1460]: <info>  [1560576194.5847] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> associating
+Jun 15 15:23:14 green2 NetworkManager[1460]: <info>  [1560576194.5870] device (wlp1s0): supplicant interface state: associating -> disconnected
+Jun 15 15:23:14 green2 NetworkManager[1460]: <info>  [1560576194.5870] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> disconnected
+Jun 15 15:23:15 green2 NetworkManager[1460]: <info>  [1560576195.5864] device (wlp1s0): supplicant interface state: disconnected -> scanning
+Jun 15 15:23:15 green2 NetworkManager[1460]: <info>  [1560576195.5865] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> scanning
+Jun 15 15:23:17 green2 NetworkManager[1460]: <warn>  [1560576197.2235] device (wlp1s0): Activation: (wifi) association took too long
+Jun 15 15:23:17 green2 NetworkManager[1460]: <info>  [1560576197.2236] device (wlp1s0): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:23:17 green2 NetworkManager[1460]: <warn>  [1560576197.2263] device (wlp1s0): Activation: (wifi) asking for new secrets
+Jun 15 15:23:18 green2 NetworkManager[1460]: <info>  [1560576198.8357] device (wlp1s0): supplicant interface state: scanning -> inactive
+Jun 15 15:23:18 green2 NetworkManager[1460]: <info>  [1560576198.8358] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> inactive
+Jun 15 15:23:19 green2 NetworkManager[1460]: <info>  [1560576199.2317] device (wlp1s0): supplicant interface state: inactive -> scanning
+Jun 15 15:23:19 green2 NetworkManager[1460]: <info>  [1560576199.2318] device (p2p-dev-wlp1s0): supplicant management interface state: inactive -> scanning
+Jun 15 15:23:22 green2 NetworkManager[1460]: <info>  [1560576202.4739] device (wlp1s0): supplicant interface state: scanning -> inactive
+Jun 15 15:23:22 green2 NetworkManager[1460]: <info>  [1560576202.4739] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> inactive
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.2321] device (wlp1s0): supplicant interface state: inactive -> scanning
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.2322] device (p2p-dev-wlp1s0): supplicant management interface state: inactive -> scanning
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.2880] settings-connection[0x562f826a5600,8d7b2b45-1293-4ead-928b-fe57353b4b2e]: write: successfully committed (ifcfg-rh: update /etc/sysconfig/network-scripts/ifcfg-AndroidAP6543)
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.2886] device (wlp1s0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.2994] device (wlp1s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.3003] device (wlp1s0): Activation: (wifi) connection 'AndroidAP6543' has security, and secrets exist.  No new secrets needed.
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.3004] Config: added 'ssid' value 'AndroidAP6543'
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.3005] Config: added 'scan_ssid' value '1'
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.3005] Config: added 'bgscan' value 'simple:30:-80:86400'
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.3005] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256'
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.3006] Config: added 'auth_alg' value 'OPEN'
+Jun 15 15:23:23 green2 NetworkManager[1460]: <info>  [1560576203.3006] Config: added 'psk' value '<hidden>'
+Jun 15 15:23:26 green2 wpa_supplicant[1632]: wlp1s0: Trying to associate with 32:07:4d:1a:73:bd (SSID='AndroidAP6543' freq=2412 MHz)
+Jun 15 15:23:26 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=1
+Jun 15 15:23:26 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SSID-TEMP-DISABLED id=0 ssid="AndroidAP6543" auth_failures=1 duration=10 reason=CONN_FAILED
+Jun 15 15:23:26 green2 NetworkManager[1460]: <info>  [1560576206.4755] device (wlp1s0): supplicant interface state: scanning -> associating
+Jun 15 15:23:26 green2 NetworkManager[1460]: <info>  [1560576206.4755] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> associating
+Jun 15 15:23:26 green2 NetworkManager[1460]: <info>  [1560576206.4791] device (wlp1s0): supplicant interface state: associating -> disconnected
+Jun 15 15:23:26 green2 NetworkManager[1460]: <info>  [1560576206.4791] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> disconnected
+Jun 15 15:23:31 green2 NetworkManager[1460]: <info>  [1560576211.4836] device (wlp1s0): supplicant interface state: disconnected -> scanning
+Jun 15 15:23:31 green2 NetworkManager[1460]: <info>  [1560576211.4838] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> scanning
+Jun 15 15:23:36 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SSID-REENABLED id=0 ssid="AndroidAP6543"
+Jun 15 15:23:38 green2 wpa_supplicant[1632]: wlp1s0: Trying to associate with 32:07:4d:1a:73:bd (SSID='AndroidAP6543' freq=2412 MHz)
+Jun 15 15:23:38 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=1
+Jun 15 15:23:38 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SSID-TEMP-DISABLED id=0 ssid="AndroidAP6543" auth_failures=2 duration=20 reason=CONN_FAILED
+Jun 15 15:23:38 green2 NetworkManager[1460]: <info>  [1560576218.4771] device (wlp1s0): supplicant interface state: scanning -> associating
+Jun 15 15:23:38 green2 NetworkManager[1460]: <info>  [1560576218.4771] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> associating
+Jun 15 15:23:38 green2 NetworkManager[1460]: <info>  [1560576218.4790] device (wlp1s0): supplicant interface state: associating -> disconnected
+Jun 15 15:23:38 green2 NetworkManager[1460]: <info>  [1560576218.4790] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> disconnected
+Jun 15 15:23:48 green2 NetworkManager[1460]: <warn>  [1560576228.2251] device (wlp1s0): Activation: (wifi) association took too long
+Jun 15 15:23:48 green2 NetworkManager[1460]: <info>  [1560576228.2256] device (wlp1s0): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:23:48 green2 NetworkManager[1460]: <warn>  [1560576228.2290] device (wlp1s0): Activation: (wifi) asking for new secrets
+Jun 15 15:23:48 green2 NetworkManager[1460]: <info>  [1560576228.4738] device (wlp1s0): supplicant interface state: disconnected -> inactive
+Jun 15 15:23:48 green2 NetworkManager[1460]: <info>  [1560576228.4739] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> inactive
+Jun 15 15:23:49 green2 NetworkManager[1460]: <info>  [1560576229.2312] device (wlp1s0): supplicant interface state: inactive -> scanning
+Jun 15 15:23:49 green2 NetworkManager[1460]: <info>  [1560576229.2313] device (p2p-dev-wlp1s0): supplicant management interface state: inactive -> scanning
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3057] settings-connection[0x562f826a5600,8d7b2b45-1293-4ead-928b-fe57353b4b2e]: write: successfully committed (ifcfg-rh: update /etc/sysconfig/network-scripts/ifcfg-AndroidAP6543)
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3085] device (wlp1s0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3094] device (wlp1s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3100] device (wlp1s0): Activation: (wifi) connection 'AndroidAP6543' has security, and secrets exist.  No new secrets needed.
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3101] Config: added 'ssid' value 'AndroidAP6543'
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3103] Config: added 'scan_ssid' value '1'
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3103] Config: added 'bgscan' value 'simple:30:-80:86400'
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3103] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256'
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3103] Config: added 'auth_alg' value 'OPEN'
+Jun 15 15:23:50 green2 NetworkManager[1460]: <info>  [1560576230.3103] Config: added 'psk' value '<hidden>'
+Jun 15 15:23:52 green2 wpa_supplicant[1632]: wlp1s0: Trying to associate with 32:07:4d:1a:73:bd (SSID='AndroidAP6543' freq=2412 MHz)
+Jun 15 15:23:52 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=1
+Jun 15 15:23:52 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SSID-TEMP-DISABLED id=0 ssid="AndroidAP6543" auth_failures=1 duration=10 reason=CONN_FAILED
+Jun 15 15:23:52 green2 NetworkManager[1460]: <info>  [1560576232.4890] device (wlp1s0): supplicant interface state: scanning -> associating
+Jun 15 15:23:52 green2 NetworkManager[1460]: <info>  [1560576232.4891] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> associating
+Jun 15 15:23:52 green2 NetworkManager[1460]: <info>  [1560576232.4917] device (wlp1s0): supplicant interface state: associating -> disconnected
+Jun 15 15:23:52 green2 NetworkManager[1460]: <info>  [1560576232.4918] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> disconnected
+Jun 15 15:24:02 green2 NetworkManager[1460]: <info>  [1560576242.4953] device (wlp1s0): supplicant interface state: disconnected -> scanning
+Jun 15 15:24:02 green2 NetworkManager[1460]: <info>  [1560576242.4955] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> scanning
+Jun 15 15:24:05 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SSID-REENABLED id=0 ssid="AndroidAP6543"
+Jun 15 15:24:09 green2 wpa_supplicant[1632]: wlp1s0: Trying to associate with 32:07:4d:1a:73:bd (SSID='AndroidAP6543' freq=2412 MHz)
+Jun 15 15:24:09 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-ASSOC-REJECT bssid=00:00:00:00:00:00 status_code=1
+Jun 15 15:24:09 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SSID-TEMP-DISABLED id=0 ssid="AndroidAP6543" auth_failures=2 duration=20 reason=CONN_FAILED
+Jun 15 15:24:09 green2 NetworkManager[1460]: <info>  [1560576249.4823] device (wlp1s0): supplicant interface state: scanning -> associating
+Jun 15 15:24:09 green2 NetworkManager[1460]: <info>  [1560576249.4823] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> associating
+Jun 15 15:24:09 green2 NetworkManager[1460]: <info>  [1560576249.4837] device (wlp1s0): supplicant interface state: associating -> disconnected
+Jun 15 15:24:09 green2 NetworkManager[1460]: <info>  [1560576249.4837] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> disconnected
+Jun 15 15:24:10 green2 NetworkManager[1460]: <info>  [1560576250.2309] device (wlp1s0): supplicant interface state: disconnected -> scanning
+Jun 15 15:24:10 green2 NetworkManager[1460]: <info>  [1560576250.2310] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> scanning
+Jun 15 15:24:15 green2 NetworkManager[1460]: <warn>  [1560576255.2230] device (wlp1s0): Activation: (wifi) association took too long
+Jun 15 15:24:15 green2 NetworkManager[1460]: <info>  [1560576255.2231] device (wlp1s0): state change: config -> failed (reason 'no-secrets', sys-iface-state: 'managed')
+Jun 15 15:24:15 green2 NetworkManager[1460]: <info>  [1560576255.2249] manager: NetworkManager state is now CONNECTED_LOCAL
+Jun 15 15:24:15 green2 NetworkManager[1460]: <warn>  [1560576255.2271] device (wlp1s0): Activation: failed for connection 'AndroidAP6543'
+Jun 15 15:24:15 green2 NetworkManager[1460]: <info>  [1560576255.2279] device (wlp1s0): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:15 green2 NetworkManager[1460]: <info>  [1560576255.2407] device (wlp1s0): set-hw-addr: set MAC address to 0E:05:7E:2A:E1:76 (scanning)
+Jun 15 15:24:15 green2 NetworkManager[1460]: <info>  [1560576255.2495] device (wlp1s0): supplicant interface state: scanning -> disconnected
+Jun 15 15:24:15 green2 NetworkManager[1460]: <info>  [1560576255.2496] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> disconnected
+Jun 15 15:24:15 green2 NetworkManager[1460]: <info>  [1560576255.2497] device (wlp1s0): supplicant interface state: disconnected -> inactive
+Jun 15 15:24:15 green2 NetworkManager[1460]: <info>  [1560576255.2498] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> inactive
+Jun 15 15:24:15 green2 wpa_supplicant[1632]: wlp1s0: Reject scan trigger since one is already pending
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5152] policy: auto-activating connection 'ZombieFleshEaters 1' (36392a6b-b0c1-4db9-83c1-963ac0c6bca1)
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5172] device (wlp1s0): Activation: starting connection 'ZombieFleshEaters 1' (36392a6b-b0c1-4db9-83c1-963ac0c6bca1)
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5175] device (wlp1s0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5180] manager: NetworkManager state is now CONNECTING
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5223] device (wlp1s0): set-hw-addr: reset MAC address to 4C:0B:BE:2C:DB:06 (preserve)
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5284] device (wlp1s0): supplicant interface state: inactive -> disconnected
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5285] device (p2p-dev-wlp1s0): supplicant management interface state: inactive -> disconnected
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5287] device (wlp1s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5291] device (wlp1s0): Activation: (wifi) access point 'ZombieFleshEaters 1' has security, but secrets are required.
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5291] device (wlp1s0): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5293] sup-iface[0x562f825d7aa0,wlp1s0]: wps: type pbc start...
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5330] device (wlp1s0): supplicant interface state: disconnected -> inactive
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5331] device (p2p-dev-wlp1s0): supplicant management interface state: disconnected -> inactive
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5333] device (wlp1s0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5346] device (wlp1s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5352] device (wlp1s0): Activation: (wifi) connection 'ZombieFleshEaters 1' has security, and secrets exist.  No new secrets needed.
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5353] Config: added 'ssid' value 'ZombieFleshEaters'
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5353] Config: added 'scan_ssid' value '1'
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5353] Config: added 'bgscan' value 'simple:30:-80:86400'
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5353] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256'
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5353] Config: added 'auth_alg' value 'OPEN'
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5353] Config: added 'psk' value '<hidden>'
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5540] device (wlp1s0): supplicant interface state: inactive -> scanning
+Jun 15 15:24:18 green2 NetworkManager[1460]: <info>  [1560576258.5541] device (p2p-dev-wlp1s0): supplicant management interface state: inactive -> scanning
+Jun 15 15:24:26 green2 wpa_supplicant[1632]: wlp1s0: Trying to associate with c4:04:15:4e:e4:12 (SSID='ZombieFleshEaters' freq=2412 MHz)
+Jun 15 15:24:26 green2 wpa_supplicant[1632]: wlp1s0: Associated with c4:04:15:4e:e4:12
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.4999] device (wlp1s0): supplicant interface state: scanning -> associating
+Jun 15 15:24:26 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5000] device (p2p-dev-wlp1s0): supplicant management interface state: scanning -> associating
+Jun 15 15:24:26 green2 wpa_supplicant[1632]: wlp1s0: WPA: Key negotiation completed with c4:04:15:4e:e4:12 [PTK=CCMP GTK=TKIP]
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5132] device (wlp1s0): supplicant interface state: associating -> 4-way handshake
+Jun 15 15:24:26 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-CONNECTED - Connection to c4:04:15:4e:e4:12 completed [id=0 id_str=]
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5132] device (p2p-dev-wlp1s0): supplicant management interface state: associating -> 4-way handshake
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5189] device (wlp1s0): supplicant interface state: 4-way handshake -> completed
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5190] device (wlp1s0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "ZombieFleshEaters"
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5190] device (p2p-dev-wlp1s0): supplicant management interface state: 4-way handshake -> completed
+Jun 15 15:24:26 green2 wpa_supplicant[1632]: wlp1s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-40 noise=-89 txrate=65000
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5326] device (wlp1s0): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5332] dhcp4 (wlp1s0): activation: beginning transaction (timeout in 45 seconds)
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5364] dhcp4 (wlp1s0): dhclient started with pid 27080
+Jun 15 15:24:26 green2 dhclient[27080]: DHCPREQUEST on wlp1s0 to 255.255.255.255 port 67 (xid=0xbf7d1563)
+Jun 15 15:24:26 green2 dhclient[27080]: DHCPACK from 192.168.0.1 (xid=0xbf7d1563)
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5688] dhcp4 (wlp1s0):   address 192.168.0.12
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5688] dhcp4 (wlp1s0):   plen 24 (255.255.255.0)
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5688] dhcp4 (wlp1s0):   gateway 192.168.0.1
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5688] dhcp4 (wlp1s0):   lease time 86400
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5688] dhcp4 (wlp1s0):   nameserver '192.168.0.1'
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5688] dhcp4 (wlp1s0): state changed unknown -> bound
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5729] device (wlp1s0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5741] device (wlp1s0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5748] device (wlp1s0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5756] manager: NetworkManager state is now CONNECTED_LOCAL
+Jun 15 15:24:26 green2 dhclient[27080]: bound to 192.168.0.12 -- renewal in 32882 seconds.
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5916] manager: NetworkManager state is now CONNECTED_SITE
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.5918] policy: set 'ZombieFleshEaters 1' (wlp1s0) as default for IPv4 routing and DNS
+Jun 15 15:24:26 green2 NetworkManager[1460]: <info>  [1560576266.6070] device (wlp1s0): Activation: successful, device activated.
+Jun 15 15:24:27 green2 NetworkManager[1460]: <info>  [1560576267.4790] manager: NetworkManager state is now CONNECTED_GLOBAL
