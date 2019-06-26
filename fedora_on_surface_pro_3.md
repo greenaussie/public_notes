@@ -7,6 +7,21 @@ previous firmware (from linux-firmware, which was experimenally downgraded with 
 fixes the problem, so it can be surmised an update to the kernel or the kernel module is involved. Yet to report this problem. `journalctl -u NetworkManager -u wpa_supplicant` seem
 to gather some logs at `info` level but not much there other than authentication seems to fail. See [log here](log.txt) of an attempt to switch networks. WPA suplicant at least probably needs to be started in debug mode.
 
+### Increasing the number of retained kernels
+
+While waiting for a fix (and time to report it properly) I wanted to ensure kernel 5.0.17-300 remained on my system. It is an **installonlypkgs** default item, so changing `installonly_limit` in /etc/dnf/dnf.conf from 3 to six should provide some breathing space without filling /boot. An upgrade folling did indeed show four available kernels instead of the usual three, so this was applied just in time to prevent the kernel 5.0.17-300 dropping off the list.
+
+### Pinning a version to prevent it being deleted
+
+Another way to prevent the kernel we want to retain from being discarded is to use the [dnf versionlock](https://dnf-plugins-core.readthedocs.io/en/latest/versionlock.html) plugin:
+
+```bash
+sudo dnf install python3-dnf-plugins-extras-versionlock
+sudo dnf versionlock add kernel-5.0.17-300.fc30
+sudo dnf versionlock list
+```
+Note the list format is a bit weird but you can tell it works as the previous command won't accept a non-existant package.
+
 ## Wifi drop out
 
 ### First fix
