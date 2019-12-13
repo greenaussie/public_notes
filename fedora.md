@@ -100,6 +100,14 @@ tvheadend may be changed now to https://dl.bintray.com/tvheadend/fedora/:bintray
 dnf copr enable phracek/PyCharm
 ```
 
+## Upgrade Fedora 30 to Fedora 31
+
+Check backups and remind myself of their encryption key!
+
+### OS
+
+https://fedoraproject.org/wiki/Common_F31_bugs - docker cgroups is going to hurt but lets give podman a chance. podman-compose seems a bit inconsistent with docker-compose. Kindof need both as code needs to run everywhere.
+
 ## Upgrade Fedora 29 to Fedora 30
 
 Check backups and remind myself of their encryption key!
