@@ -4,7 +4,20 @@ Nginx did not (at the time I built this, which is some years ago, as you can see
 
 ```bash
 cd /usr/local/src/nginx-1.15.8
-./configure --with-http_ssl_module --with-http_v2_module --add-module=../ngx_http_auth_pam_module-master --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --pid-path=/var/run/nginx.pid --lock-path=/var/lock/nginx --prefix=/usr/local --user=nginx --group=nginx --http-log-path=/var/log/nginx/access.log --with-http_sub_module && make && sudo make install
+./configure --with-http_ssl_module \
+  --with-http_v2_module \
+  --add-module=../ngx_http_auth_pam_module-master \
+  --conf-path=/etc/nginx/nginx.conf \
+  --error-log-path=/var/log/nginx/error.log \
+  --pid-path=/var/run/nginx.pid \
+  --lock-path=/var/lock/nginx \
+  --prefix=/usr/local \
+  --user=nginx \
+  --group=nginx \
+  --http-log-path=/var/log/nginx/access.log 
+  --with-http_sub_module
+
+make && make install
 ```
 
 Redhat package nss-pam-ldapd provides the glue for PAM to use nscld  (local LDAP name service daemon) and the PAM module itself (pam_ldap.so), which allows nginx to ask (via pam) the operating system do the LDAP lookup. Note we don't actually configure nss to use this, despite tha package name.
