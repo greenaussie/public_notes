@@ -14,7 +14,7 @@ cd /usr/local/src/nginx-1.15.8
   --prefix=/usr/local \
   --user=nginx \
   --group=nginx \
-  --http-log-path=/var/log/nginx/access.log 
+  --http-log-path=/var/log/nginx/access.log \
   --with-http_sub_module
 
 make && make install
