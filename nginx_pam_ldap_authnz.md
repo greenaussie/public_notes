@@ -1,6 +1,6 @@
 # HTTP basic auth using LDAP by the web server leveraging PAM
 
-Nginx did not (at the time I built this, which is some years ago, as you can see by the nginx version in the example) have an ldap authn/z module I wanted to use, so I decided to use the operating system's PAM to carry out the ldap looupup instead. I had to compile nginx from source, because it's auth_pam module was not provided by default -  [https://www.nginx.com/resources/wiki/modules/](https://www.nginx.com/resources/wiki/modules/).
+Nginx did not (at least the time I built this, which is some years ago, as you can see by the nginx version in the example) have an LDAP authn/z module I wanted to use, so I decided to use the operating system's PAM to carry out the LDAP lookup instead. I had to compile Nginx from source, because it's auth_pam module was not provided by default -  [https://www.nginx.com/resources/wiki/modules/](https://www.nginx.com/resources/wiki/modules/).
 
 ```bash
 cd /usr/local/src/nginx-1.15.8
