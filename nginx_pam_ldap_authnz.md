@@ -20,7 +20,7 @@ cd /usr/local/src/nginx-1.15.8
 make && make install
 ```
 
-Redhat package nss-pam-ldapd provides the glue for PAM to use nscld  (local LDAP name service daemon) and the PAM module itself (pam_ldap.so), which allows nginx to ask (via pam) the operating system do the LDAP lookup. Note we don't actually configure nss to use this, despite tha package name.
+Redhat package `nss-pam-ldapd` provides the glue for PAM to use `nscld`  (local LDAP name service daemon) and the PAM module itself (`pam_ldap.so`), which allows nginx to ask (via PAM) the operating system do the LDAP lookup. Note we don't actually configure nss to use this, despite the package name.
 
 ```bash
 yum install nss-pam-ldapd
