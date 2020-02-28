@@ -2,4 +2,4 @@
 
 Just some notes. :)
 
-Test adding GPG signing of commits
+Nothing here is guarenteed to work.
