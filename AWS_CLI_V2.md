@@ -1,6 +1,6 @@
 # AWS CLI v2
 
-Note there are [breaking changes](https://docs.aws.amazon.com/cli/latest/userguide/cliv2-migration.html) for AWS CLI v1. The one which got me for a while before I found that page was the use `AWS_PAGER` which was messing with parsing of outputs from commands.
+Note there are [breaking changes](https://docs.aws.amazon.com/cli/latest/userguide/cliv2-migration.html) for moveing from AWS CLI v1 to v2. The one which got me for a while before I found that page was the use `AWS_PAGER` which was messing with parsing of outputs from commands.
 
 Add to `.bashrc`:
 
