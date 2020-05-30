@@ -4,7 +4,7 @@
 
 To make docker work for normal users:
 
-```
+```bash
 sudo group add docker
 sudo usermod -a -G docker $USER
 sudo reboot
@@ -19,27 +19,34 @@ Note that `newgrp` does not seem to to the trick, possibly a full log out and lo
 Install system version but also need others versions
 
 ## bundler
-```
+
+```bash
 gem install bundler
 ```
+
 ### Ruby version manager (rvm)
 
 https://rvm.io/rvm/install
 
 ### Stackup
 
-gem install stackup
+Add to .bashrc
+
+```bash
+alias stackup="podman run --rm\
+  -v `pwd`:/cwd\
+  -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN\
+  -e AWS_DEFAULT_REGION -e AWS_REGION\
+  realestate/stackup:1.5.0"
+```
 
 ## AWS
 
-```
-dnf install aws-cli
-```
+See [AWS_CLI_V2.md](AWS_CLI_V2.md)
 
 ## SELinux
 
 I installed most of the packages listed at https://docs.fedoraproject.org/en-US/Fedora/25/html/SELinux_Users_and_Administrators_Guide/chap-Security-Enhanced_Linux-Working_with_SELinux.html#sect-Security-Enhanced_Linux-Working_with_SELinux-SELinux_Packages.
-
 
 ## Grub config
 
@@ -64,6 +71,7 @@ GRUB_TERMINAL_OUTPUT="gfxterm"
 GRUB_FONT_PATH="/boot/grub2/fonts/unicode.pf2"
 GRUB_GFXMODE="3440x1440x16"
 ```
+
 Then
 
 ```bash
@@ -79,7 +87,7 @@ rpmfusion-nonfree.repo
 dl.bintray.com_tvheadend_fedora_linux_4.2_fc28_x86_64_.repo
 fedora-updates-testing.repo
 rpmfusion-nonfree-steam.repo
-fedora-cisco-openh264.repo 
+fedora-cisco-openh264.repo
 google-chrome.repo
 rpmfusion-nonfree-updates.repo
 fedora-modular.repo
@@ -96,7 +104,7 @@ rpmfusion-nonfree-nvidia-driver.repo
 
 tvheadend may be changed now to https://dl.bintray.com/tvheadend/fedora/:bintray-tvheadend-fedora-4.2-stable.repo, but that actually tvheadend is from rpmfusion, therefore probably that is not required.
 
-```
+```bash
 dnf copr enable phracek/PyCharm
 ```
 

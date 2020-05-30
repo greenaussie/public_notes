@@ -1,5 +1,7 @@
 # Notes on Fedora setup specific to Surface Pro 3
 
+> I gave my Surface Pro 3 away.... This will probably no longer be updated.
+
 ## And then it broek again....
 
 Update from kernel 5.0.17-300 (no problems) to 5.1.7-300 and 5.1.7-300, I cannot connect to some wifi networks (mwifiex driver, marvel firmware). Both current and
